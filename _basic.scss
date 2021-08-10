@@ -54,6 +54,9 @@
     .btn__link {
       display: block;
       text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     p,
     h6 {
@@ -179,6 +182,14 @@
       }
       a {
         color: #fff;
+      }
+      .btn__link {
+        &:hover {
+          background-color: #ff5250;
+          transition: 0.3s all ease -out;
+          border: none;
+          text-decoration: 1px solid transparent;
+        }
       }
       .content {
         margin-top: 30px;
@@ -629,27 +640,25 @@
     transition: 0.3s;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 85px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
-    @include respond-tabLand {
-      padding-top: 200px;
-    }
+
     &__content {
-      margin: 0 auto;
-      width: 70%;
-      max-width: 800px;
+      margin: auto;
+      width: 800px;
+      max-height: 700px;
       -webkit-animation-name: zoom;
       -webkit-animation-duration: 0.6s;
       animation-name: zoom;
       animation-duration: 0.6s;
-
       @include respond-phone {
         width: 100%;
+        max-width: 400px;
       }
     }
     .close {
