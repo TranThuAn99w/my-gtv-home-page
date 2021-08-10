@@ -186,9 +186,9 @@
       .btn__link {
         &:hover {
           background-color: #ff5250;
-          transition: 0.3s all ease -out;
-          border: none;
-          text-decoration: 1px solid transparent;
+          transition: 0.3s all ease-out;
+          border: 1px solid #ff5250;
+          text-decoration: none;
         }
       }
       .content {

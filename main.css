@@ -258,11 +258,10 @@
 
 #home-body .ss__head .btn__link:hover {
   background-color: #ff5250;
-  -webkit-transition: 0.3s all ease -out;
-  transition: 0.3s all ease -out;
-  border: none;
-  -webkit-text-decoration: 1px solid transparent;
-          text-decoration: 1px solid transparent;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+  border: 1px solid #ff5250;
+  text-decoration: none;
 }
 
 #home-body .ss__head .content {
