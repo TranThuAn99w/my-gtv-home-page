@@ -26,7 +26,7 @@
   padding: 65px 0;
   color: #18191f;
   .container {
-    width: calc(100% - 230px);
+    width: calc(100% - 330px);
     @include respond-tabLand {
       width: calc(100% - 50px);
     }
@@ -48,7 +48,7 @@
     a {
       font-size: 18px;
       line-height: 32px;
-      font-family: "Encode Sans", sans-serif;
+      font-family: "Inter", sans-serif;
     }
     a,
     .btn__link {
@@ -57,6 +57,10 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+    .btn__link {
+      font-size: 16px;
+      line-height: 24px;
     }
     p,
     h6 {
@@ -104,6 +108,7 @@
     h6 {
       font-size: 20px;
       line-height: 30px;
+      font-weight: 500;
       @include respond-phone {
         font-size: 18px;
         line-height: 26px;
@@ -135,7 +140,7 @@
       &__cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
+        gap: 30px;
         @include respond-tabLand {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -184,6 +189,9 @@
         color: #fff;
       }
       .btn__link {
+        &:first-child {
+          border: 1px solid #ff5250;
+        }
         &:hover {
           background-color: #ff5250;
           transition: 0.3s all ease-out;
@@ -231,12 +239,19 @@
           h5 {
             margin-bottom: 10px !important;
           }
+          p {
+            font-size: 16px;
+            line-height: 28px;
+          }
         }
         &__btns {
           a {
             color: #276ae3;
+            font-size: 14px;
+            line-height: 20px;
             span {
-              font-weight: 600;
+              font-weight: 500;
+              margin-right: 10px;
             }
           }
           .flex {
@@ -264,11 +279,19 @@
               width: 50%;
             }
           }
+          .col {
+            margin-bottom: 64px;
+            @include respond-tabPort {
+              margin-bottom: 24px;
+            }
+            @include respond-phone {
+              margin-bottom: 24px;
+            }
+          }
           .box {
-            padding: 0 30px;
+            padding: 0 15px;
             position: relative;
             @include respond-tabPort {
-              padding: 10px;
               &.tablet {
                 &::after {
                   content: "";
@@ -323,6 +346,7 @@
       }
     }
     &__khach-hang {
+      background-color: #f4f5f7;
       .container {
         .content {
           &__head {
@@ -336,10 +360,12 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              img {
-                width: 100%;
-                height: 100%;
-              }
+              width: 170px;
+              height: 96px;
+              margin: 12px;
+              background: #ffffff;
+              box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.2);
+              border-radius: 16px;
             }
             .flex {
               align-items: center;
@@ -355,18 +381,22 @@
               .grid.mb {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+                .item {
+                  width: 100%;
+                  margin: 0;
+                }
               }
             }
             @include respond-phone {
               .grid.mb {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
                 .item {
                   &:last-child {
+                    width: 50%;
+                    margin: auto;
                     grid-area: 5 / 1 / 6 / 3;
-                    img {
-                      width: 50%;
-                      height: 100%;
-                    }
                   }
                 }
               }
@@ -386,6 +416,20 @@
       .banner {
         height: 280px;
         border-radius: 16px;
+        .col {
+          &:first-child {
+            margin-top: 70px;
+            margin-left: 48px;
+            @include respond-tabPort {
+              margin: 0;
+              padding: 32px 20px;
+            }
+            @include respond-phone {
+              margin: 0;
+              padding: 27px 18px;
+            }
+          }
+        }
         .btn__link,
         h6 {
           color: white;
@@ -406,43 +450,43 @@
           }
           .img1 {
             position: absolute;
-            left: 90px;
+            left: 180px;
             top: 0;
             @include respond-tabLand {
               left: 70px;
             }
             @include respond-tabPort {
-              left: 0px;
+              left: -30px;
             }
             @include respond-phone {
               & {
                 display: none;
               }
               &.mb {
-                width: 120px;
+                left: 0;
+                top: 0px;
                 display: block;
-                top: 40px;
               }
             }
           }
           .img2 {
             position: absolute;
-            left: 90px;
+            left: 180px;
             top: 149px;
             @include respond-tabLand {
               left: 70px;
             }
             @include respond-tabPort {
-              left: 0px;
+              left: -30px;
             }
             @include respond-phone {
               & {
                 display: none;
               }
               &.mb {
-                width: 120px;
+                left: 0;
+                top: 183px;
                 display: block;
-                top: 191px;
                 border-radius: 0 0 0 16px;
               }
             }
@@ -452,7 +496,8 @@
             right: 0;
             border-radius: 0 16px 16px 0;
             @include respond-phone {
-              top: 40px;
+              top: 7px;
+              width: 70%;
               border-radius: 0 0 16px 0;
             }
           }
@@ -464,26 +509,11 @@
         }
         @include respond-phone {
           height: 100%;
-          .py4,
-          .pl3 {
-            padding: 0;
-          }
           .flex {
             flex-direction: column;
-            .col-6 {
-              width: 100%;
+            .col:last-child {
+              height: 340px;
             }
-            .col-6:first-child {
-              .content {
-                padding: 20px;
-              }
-            }
-            .col-6:last-child {
-              height: 320px;
-            }
-          }
-          &.max-width-4 {
-            max-width: 21rem;
           }
         }
       }
@@ -513,46 +543,56 @@
         padding: 20px 24px;
         box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
         border-radius: 8px;
-        label,
-        input,
-        textarea,
-        button {
-          font-size: 16px;
-          font-family: "Encode Sans", sans-serif;
-        }
-        label {
-          padding-left: 16px;
-          font-weight: 600;
-          color: #333333;
-          span {
-            color: #da1414;
-          }
-        }
-        input,
-        textarea {
-          padding: 12px 16px;
-          margin-top: 6px;
-          border-radius: 8px;
-          outline: none;
-          border: 0.25px solid #bdbdbd;
-        }
-        textarea {
-          resize: none;
-        }
-        ::placeholder {
-          color: #bdbdbd;
-          opacity: 1;
-        }
-        :-ms-input-placeholder {
-          color: #bdbdbd;
-        }
-        ::-ms-input-placeholder {
-          color: #bdbdbd;
-        }
-        button {
-          color: #fff;
-          border: none;
-        }
+
+        // form {
+        //   label,
+        //   input,
+        //   textarea,
+        //   button {
+        //     font-size: 16px;
+        //     font-family: "Encode Sans", sans-serif;
+        //   }
+        //   .hs-form-e6d70e76-7ce5-4c27-b37c-c8e96b8b5b05_f592da79-3d97-46f1-ab5f-8ac29e17d3d0
+        //     .hs-form-field
+        //     label
+        //     span {
+        //     font-family: "Encode Sans", sans-serif !important;
+        //   }
+        //   label {
+        //     padding-left: 16px;
+        //     font-weight: 600;
+        //     color: #333333;
+        //     span {
+        //       color: #da1414;
+        //     }
+        //   }
+        //   input,
+        //   textarea {
+        //     padding: 12px 16px;
+        //     margin-top: 6px;
+        //     border-radius: 8px;
+        //     outline: none;
+        //     border: 0.25px solid #bdbdbd;
+        //   }
+        //   textarea {
+        //     resize: none;
+        //   }
+        // }
+
+        // ::placeholder {
+        //   color: #bdbdbd;
+        //   opacity: 1;
+        // }
+        // :-ms-input-placeholder {
+        //   color: #bdbdbd;
+        // }
+        // ::-ms-input-placeholder {
+        //   color: #bdbdbd;
+        // }
+        // button {
+        //   color: #fff;
+        //   border: none;
+        // }
       }
       @include respond-tabPort {
         .flex {
@@ -629,6 +669,9 @@
           }
           @include respond-phone {
             grid-template-columns: repeat(1, 1fr);
+            .slick-arrow {
+              display: none !important;
+            }
           }
         }
       }
@@ -647,7 +690,15 @@
     height: 100%;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
-
+    @include respond-tabLand {
+      padding-top: 30%;
+    }
+    @include respond-tabPort {
+      padding-top: 25%;
+    }
+    @include respond-phone {
+      padding-top: 50%;
+    }
     &__content {
       margin: auto;
       width: 800px;

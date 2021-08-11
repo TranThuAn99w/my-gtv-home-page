@@ -23,10 +23,10 @@ $(function() {
 $('.content__imgs').slick({
 slidesToShow: 1,
 slidesToScroll: 1,
-
 mobileFirst: true,
 arrows: true,
 dots: true,
+autoplay: true,
 responsive: [
     {
         breakpoint: 700,
