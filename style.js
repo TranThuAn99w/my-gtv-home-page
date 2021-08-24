@@ -39,4 +39,5 @@ responsive: [
 $(window).on('resize', function() {
 $('.content__imgs').slick('resize');
 });
+
 });

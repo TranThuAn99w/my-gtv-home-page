@@ -83,6 +83,10 @@
         font-size: 28px;
         line-height: 40px;
       }
+      @include respond-super-mini-phone {
+        font-size: 24px;
+        line-height: 38px;
+      }
     }
     h3 {
       font-size: 40px;
@@ -133,7 +137,7 @@
           }
           @include respond-phone {
             padding: 5px 15px;
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -182,8 +186,11 @@
       background-repeat: no-repeat;
       background-size: cover;
       color: #fff;
-      @include respond-tabPort {
-        min-height: 650px;
+      @include respond-phone {
+        min-height: 680px;
+        background: url("background-mb.png");
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       a {
         color: #fff;
@@ -200,7 +207,7 @@
         }
       }
       .content {
-        margin-top: 30px;
+        margin-top: 37px;
         @include respond-tabPort {
           margin-top: 0;
         }
@@ -210,6 +217,19 @@
             text-align: center;
             p {
               font-size: 16px;
+            }
+          }
+        }
+        @include respond-mini-phone {
+          &__text {
+            padding: 0 5px;
+          }
+          &__btns {
+            .flex {
+              flex-direction: column;
+              .btn__link {
+                margin: 8px 0;
+              }
             }
           }
         }
@@ -291,12 +311,16 @@
           .box {
             padding: 0 15px;
             position: relative;
+            @include respond-tabLand {
+              padding: 20px;
+            }
             @include respond-tabPort {
+              padding: 0 10px;
               &.tablet {
                 &::after {
                   content: "";
                   position: absolute;
-                  top: 25px;
+                  top: 30px;
                   right: 0px;
                   width: 1px;
                   height: 100px;
@@ -305,23 +329,33 @@
               }
             }
             @include respond-phone {
+              padding: 0 15px;
               &.tablet {
                 &::after {
                   opacity: 0;
                 }
               }
             }
+            @include respond-mini-phone {
+              padding: 0 10px;
+            }
+            @include respond-super-mini-phone {
+              padding: 0 13px;
+            }
             &.br-box {
               &::after {
                 content: "";
                 position: absolute;
-                top: 25px;
+                top: 50px;
                 right: 0px;
                 width: 1px;
                 height: 100px;
                 border-right: 1px solid #fff;
               }
               @include respond-tabPort {
+                &::after {
+                  top: 30px;
+                }
                 &.tablet {
                   &::after {
                     opacity: 0;
@@ -329,6 +363,9 @@
                 }
               }
               @include respond-phone {
+                &::after {
+                  top: 20px;
+                }
                 &.tablet {
                   &::after {
                     opacity: 1;
@@ -468,6 +505,12 @@
                 display: block;
               }
             }
+            @include respond-mini-phone {
+              width: 135px;
+            }
+            @include respond-super-mini-phone {
+              width: 40%;
+            }
           }
           .img2 {
             position: absolute;
@@ -490,6 +533,18 @@
                 border-radius: 0 0 0 16px;
               }
             }
+            @include respond-mini-phone {
+              width: 135px;
+              &.mb {
+                top: 160px;
+              }
+            }
+            @include respond-super-mini-phone {
+              width: 40%;
+              &.mb {
+                top: 137px;
+              }
+            }
           }
           .img3 {
             position: absolute;
@@ -499,6 +554,12 @@
               top: 7px;
               width: 70%;
               border-radius: 0 0 16px 0;
+            }
+            @include respond-mini-phone {
+              width: 240px;
+            }
+            @include respond-super-mini-phone {
+              width: 205px;
             }
           }
         }
@@ -513,6 +574,20 @@
             flex-direction: column;
             .col:last-child {
               height: 340px;
+            }
+          }
+        }
+        @include respond-mini-phone {
+          .flex {
+            .col:last-child {
+              height: 305px;
+            }
+          }
+        }
+        @include respond-super-mini-phone {
+          .flex {
+            .col:last-child {
+              height: 262px;
             }
           }
         }
@@ -535,6 +610,18 @@
             font-family: "Encode Sans", sans-serif;
             font-size: 18px;
             line-height: 32px;
+          }
+        }
+        ul {
+          margin: 32px 0;
+          padding-left: 20px;
+          @include respond-super-mini-phone {
+            padding-right: 10px;
+          }
+        }
+        @include respond-phone {
+          &__head {
+            margin-left: 0 !important;
           }
         }
       }
@@ -603,7 +690,6 @@
               width: 100%;
               &__head {
                 width: 60%;
-                margin-left: 20px;
               }
             }
           }
@@ -628,6 +714,13 @@
           }
           button {
             padding: 10px;
+          }
+        }
+      }
+      @include respond-super-mini-phone {
+        .content {
+          &__head {
+            width: 100% !important;
           }
         }
       }
