@@ -25,7 +25,7 @@ slidesToShow: 1,
 slidesToScroll: 1,
 mobileFirst: true,
 arrows: true,
-dots: true,
+dots: false,
 autoplay: true,
 responsive: [
     {
